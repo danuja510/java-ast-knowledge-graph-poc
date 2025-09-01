@@ -1,0 +1,4 @@
+CLASS_NODE_LABEL = "Class"
+METHOD_NODE_LABEL = "Method"
+DATABASE_TABLE_NODE_LABEL = "Database_Table"
+ENDPOINT_NODE_LABEL = "Endpoint"

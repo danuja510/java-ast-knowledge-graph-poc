@@ -1,1 +1,4 @@
 tree-sitter
+tree-sitter-java
+ipykernel
+neo4j
