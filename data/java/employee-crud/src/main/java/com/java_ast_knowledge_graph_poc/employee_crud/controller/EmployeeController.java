@@ -22,6 +22,7 @@ import com.java_ast_knowledge_graph_poc.employee_crud.service.EmployeeService;
 public class EmployeeController {
 
     private final EmployeeService employeeService;
+    private Object object;
 
     @Autowired
     public EmployeeController(EmployeeService employeeService) {
