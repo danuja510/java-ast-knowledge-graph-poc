@@ -38,25 +38,28 @@ public class EmployeeController {
     @GetMapping("/{id}")
     public ResponseEntity<EmployeeDTO> getEmployeeById(@PathVariable Long id) {
         EmployeeDTO employee = employeeService.getEmployeeById(id);
-        return ResponseEntity.ok(employee);
+        return sendOk(employee);
     }
 
     @GetMapping
     public ResponseEntity<List<EmployeeDTO>> getAllEmployees() {
-        List<EmployeeDTO> employees = employeeService.getAllEmployees();
-        return ResponseEntity.ok(employees);
+        return ResponseEntity.ok(employeeService.getAllEmployees());
     }
 
     @PutMapping("/{id}")
     public ResponseEntity<EmployeeDTO> updateEmployee(@PathVariable Long id, @RequestBody EmployeeDTO employeeDTO) {
         employeeDTO.setId(id);
         EmployeeDTO updatedEmployee = employeeService.updateEmployee(employeeDTO);
-        return ResponseEntity.ok(updatedEmployee);
+        return sendOk(updatedEmployee);
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteEmployee(@PathVariable Long id) {
         employeeService.deleteEmployee(id);
         return ResponseEntity.noContent().build();
+    }
+
+    private ResponseEntity<EmployeeDTO> sendOk(EmployeeDTO employeeDTO) {
+        return ResponseEntity.ok(employeeDTO);
     }
 }
