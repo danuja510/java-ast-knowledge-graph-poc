@@ -2,3 +2,6 @@ CLASS_NODE_LABEL = "Class"
 METHOD_NODE_LABEL = "Method"
 DATABASE_TABLE_NODE_LABEL = "Database_Table"
 ENDPOINT_NODE_LABEL = "Endpoint"
+
+PACKAGE_DECLARATION_AST_NODE_TYPE = "package_declaration"
+SCOPED_IDENTIFIER_AST_NODE_TYPE = "scoped_identifier"
